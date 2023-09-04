@@ -1,7 +1,32 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+
 export default function Navbar() {
-    return (
-        <div>
-            <h1>Navbar</h1>
+    return (<>
+    {/* 
+    create a navbar and style it in this file. if you use a liberary remember to import it and explain it below.
+    
+    */}
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container-fluid">
+            <a className="navbar-brand" href="/">Fremtia Consulting</a>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+            </button>
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav">
+            <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+            <Link className="nav-link" to="/qbouncehistory">Qbounce</Link>
+            
+            </div>
         </div>
+        </div>
+    </nav>
+
+    
+</>
+            
     );
 }

@@ -1,7 +1,6 @@
 
-import './App.css';
-import Navbar from './components/Navbar';
-import ResultList from './components/ResultList';
+import Navbar from './../../../components/Navbar';
+import ResultList from './../../../components/ResultList';
 
 const exampleResult = [
   {
@@ -20,18 +19,20 @@ const exampleResult = [
     height: 3,
   },
 ];
-function App() {
+export default function History() {
   return (<>
-    <Navbar/>
+    <div className="container"
+    style={{
+      padding: '20px',
+    }}
+    >
     <h1>
-      hello world
+      Qbounce usage history
     </h1>
     <ResultList
       results={exampleResult}
     />
-
+    </div>
   </>
   );
 }
-
-export default App;
