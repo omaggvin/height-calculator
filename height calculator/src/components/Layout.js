@@ -6,7 +6,12 @@ export default function Layout({ children }) {
     return (
         <>
         <Navbar />
+        <div
+            className=" container-fluid bg-light"
+        >
+            
         <Outlet />
+        </div>
         </>
     );
     }
