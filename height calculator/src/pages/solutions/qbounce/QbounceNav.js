@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useParams } from "react-router-dom";
 
 export default function QbounceNav() {
     return (
@@ -11,7 +11,32 @@ export default function QbounceNav() {
             it is bellow:
             */}
             <div className="container secnav">
+                
                 <div className="row">
+                    <Link className="navbar-brand col-3 " to="/qbounce">
+                        <b>QBounce</b>
+                    </Link>
+                    <div className="col">
+                        <Link
+                            to="/qbounce"
+                            style={{
+                                textDecoration: "none",
+                                color: "black",
+                            }}
+                        >
+                            Info
+                        </Link>
+                    </div>
+                    <div className="col">
+                        <Link
+                            to="/qbounce/calculator"
+                            style={{
+                                textDecoration: "none",
+                                color: "black",
+                            }}>
+                        Calculator
+                        </Link>
+                    </div>
                     <div className="col">
                         <Link
                             to="/qbounce/history"
@@ -23,28 +48,7 @@ export default function QbounceNav() {
                             History
                         </Link>
                     </div>
-                    <div className="col">
-                        <Link
-                            to="/qbounce/heightcalculator"
-                            style={{
-                                textDecoration: "none",
-                                color: "black",
-                            }}
-                        >
-                        Height-Calculator
-                        </Link>
-                    </div>
-                    <div className="col">
-                        <Link
-                            to="/qbounce/info"
-                            style={{
-                                textDecoration: "none",
-                                color: "black",
-                            }}
-                        >
-                            Info
-                        </Link>
-                    </div>
+                    
                 </div>
             </div>
             <Outlet />

@@ -12,7 +12,7 @@ export default function Navbar() {
             ">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">
-                        Fremtia Consulting
+                    <b>Fremtia Consulting</b>
                     </Link>
                     <button
                         className="navbar-toggler"

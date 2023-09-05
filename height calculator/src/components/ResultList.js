@@ -38,6 +38,15 @@ export default function ResultList({ results }) {
                     <TableRow>
                         <TableCell>
                             <TableSortLabel
+                                active={orderBy === 'name'}
+                                direction={orderBy === 'name' ? order : 'asc'}
+                                onClick={handleSort('name')}
+                            >
+                                Name
+                            </TableSortLabel>
+                        </TableCell>
+                        <TableCell>
+                            <TableSortLabel
                                 active={orderBy === 'timeofsubmission'}
                                 direction={orderBy === 'timeofsubmission' ? order : 'asc'}
                                 onClick={handleSort('timeofsubmission')}
@@ -68,6 +77,7 @@ export default function ResultList({ results }) {
                 <TableBody>
                     {sortedResults.map((result, index) => (
                         <TableRow key={index}>
+                            <TableCell title={`Name: ${result.name}`}>{result.name}</TableCell>
                             <TableCell title={`Time of Submission: ${formatDate(result.timeofsubmission)}`}>
                                 {formatDate(result.timeofsubmission)}
                             </TableCell>
