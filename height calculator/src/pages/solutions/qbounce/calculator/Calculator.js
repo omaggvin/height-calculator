@@ -32,20 +32,6 @@ function ControlButton({ label, onClick }) {
     );
 }
 
-function RecordingTimeInput({ value, onChange }) {
-    return (
-        <input
-            type="datetime-local"
-            className="form-control mt-3"
-            placeholder="Time of recording..."
-            value={value}
-            onChange={onChange}
-        />
-    );
-}
-
-
-
 function ActionButtons({ onSave, onDiscard }) {
     return (
         <div className="d-flex justify-content-between mt-3">
@@ -95,7 +81,7 @@ function Calculator() {
                 
                 break;
             case 'done-record':
-                recordingTime != "" && setRecordingTime(new Date().toISOString());
+                recordingTime !== "" && setRecordingTime(new Date().toISOString());
         
                 setResults([
                     {
