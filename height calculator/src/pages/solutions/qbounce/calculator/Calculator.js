@@ -18,7 +18,8 @@ function InputTimer({ elapsedTime, isTiming, onChange }) {
             }
             disabled={isTiming}
             onChange={onChange}
-
+            min="0"
+            step="0.1"
         />
     );
 }
