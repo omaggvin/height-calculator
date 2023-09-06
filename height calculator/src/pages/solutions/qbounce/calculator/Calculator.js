@@ -55,7 +55,13 @@ function ActionButtons({ onSave, onDiscard }) {
     );
 }
 async function getHeigthfromTime(time) {
-    return 0.5 * 9.81 * time * time;
+    const theta = {
+        a: 1.8481726293897065, 
+        b: 5.192126328600315,
+    }
+    
+    
+    return theta.a * time ** 2 + theta.b * time;
 }
 
 function Calculator() {
